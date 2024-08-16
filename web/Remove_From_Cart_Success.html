@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.3/dist/sweetalert2.all.min.js"></script>
+    <script>
+        function showPopup() {
+            Swal.fire({
+                title: 'Success!',
+                text: 'Book Removed Successfully',
+                icon: 'success',
+                confirmButtonText: 'OK'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = "User_Cart.html"; // Redirect to Dashboard page after clicking OK
+                }
+            });
+        }
+    </script>
+</head>
+<body onload="showPopup()">
+</body>
+</html>

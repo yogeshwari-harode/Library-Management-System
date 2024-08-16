@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User/Admin Selection</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="https://www.acquirosolutions.com/images/about/image-23.png" type="image/png">
+        <style>
+            body {
+                background-color: #f0f8ff;
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 40px;
+                padding-left: 10px;
+            }
+            .header {
+                text-align: center;
+                color: black;
+                font-size: 70px;
+                margin-bottom: 40px;
+            }
+            .main-container {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+            }
+            .bookimage img {
+                width: 600px;
+                height: auto;
+            }
+            .container {
+                display: flex;
+                gap: 50px;
+            }
+            .image {
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                text-align: center;
+                cursor: pointer;
+                transition: transform 0.3s, box-shadow 0.3s;
+            }
+            .image:hover {
+                transform: scale(1.05);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            }
+            .image img {
+                width: 100px;
+                height: 100px;
+            }
+            h3 {
+                margin: 10px 0 0 0;
+                color: #333;
+            }
+        </style>
+        <script>
+            function redirectToUserPage() {
+                window.location.href = "userLogin.html"; // Replace with your actual user page URL
+            }
+            function redirectToAdminPage() {
+                window.location.href = "Login.html"; // Replace with your actual admin page URL
+            }
+            window.onload = function() {
+                document.querySelector('.image.user').onclick = redirectToUserPage;
+                document.querySelector('.image.admin').onclick = redirectToAdminPage;
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            Library Management System
+        </div>
+        <div class="main-container">
+            <div class='bookimage'>
+                <img src='https://www.pngkit.com/png/detail/208-2085434_symbols-library-icon-jpg.png' alt="Book Image">
+            </div>
+            <div class="container">
+                <div class="image admin">
+                    <img src="https://png.pngtree.com/png-vector/20220709/ourmid/pngtree-businessman-user-avatar-wearing-suit-with-red-tie-png-image_5809521.png" alt="Admin">
+                    <h3>Admin</h3>
+                </div>
+                <div class="image user">
+                    <img src="https://lirp.cdn-website.com/9451ab21/dms3rep/multi/opt/man+1+cartoon-1920w.png" alt="User">
+                    <h3>User</h3>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

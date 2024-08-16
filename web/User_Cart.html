@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://www.acquirosolutions.com/images/about/image-23.png" type="image/png"> 
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384- ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>View</title>
+</head>
+
+<body class="p-3 mb-2 bg-light text-dark">
+    <section class="nav-bar">
+        <div class="logo">Your Watchlist Details</div>
+        <ul class="menu">
+            <li><a href="UserDashboard.html">Back</a></li>
+        </ul>
+    </section>
+    <section>
+        <div class="p-3 mb-2 bg-light text-dark">
+            <div class="container my-3">
+            </div>
+        </div>
+    </section>
+
+    
+    <div id="Usercart"></div>
+
+    <script>
+        // Use JavaScript to dynamically load the content from the servlet when the page loads
+        window.addEventListener('load', function () {
+            fetch('View_Cart', {
+                method: 'POST',
+            })
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('Usercart').innerHTML = data;
+                });
+        });
+    </script>
+</body>
+
+</html>
+
+ 
+ 

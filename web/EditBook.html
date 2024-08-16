@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://www.acquirosolutions.com/images/about/image-23.png" type="image/png">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Edit Book</title>
+</head>
+
+<body>
+
+<div class="logo">Update Book Details</div>
+
+<section>
+    <div class="p-3 mb-2 bg-light text-dark">
+        <div class="form-group row">
+            <div class="container my-3">
+                <form method="POST" action="Edit_Book" enctype="multipart/form-data">
+
+                    <div class="form-group row">
+                        <label for="inputISBN" class="col-sm-2 col-form-label">ISBN Number <span class="text-danger">*</span></label>
+                        <div class="col-sm-10">
+                            <input type="number" name="isbn" class="form-control" id="inputISBN" placeholder="Enter ISBN number of the book which you want to edit" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="inputTitle" class="col-sm-2 col-form-label">New Book Title <span class="text-danger">*</span></label>
+                        <div class="col-sm-10">
+                            <input type="text" name="title" class="form-control" id="inputTitle" placeholder="Enter Book Title" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="inputAuthor" class="col-sm-2 col-form-label">New Author Name <span class="text-danger">*</span></label>
+                        <div class="col-sm-10">
+                            <input type="text" name="author" class="form-control" id="inputAuthor" placeholder="Enter Author Name" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="inputPrice" class="col-sm-2 col-form-label">New Price <span class="text-danger">*</span></label>
+                        <div class="col-sm-10">
+                            <input type="number" name="price" class="form-control" id="inputPrice" placeholder="Enter Price" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="inputCategory" class="col-sm-2 col-form-label">Category <span class="text-danger">*</span></label>
+                        <div class="col-sm-10">
+                            <select name="category" class="form-control" id="inputCategory" required>
+                                <option value="">Select Category</option>
+                                <option value="Story Books">Story Books</option>
+                                <option value="Art">Art</option>
+                                <option value="Fantasy">Fantasy</option>
+                                <option value="CookBook">CookBook</option>
+                                <option value="Business and Economics">Business and Economics</option>
+                                <option value="Textbooks">Textbooks</option>
+                                <option value="Motivational">Motivational</option>
+                                <option value="Biography">Biography</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="inputCover" class="col-sm-2 col-form-label">New Book Cover</label>
+                        <div class="col-sm-10">
+                            <input type="file" name="cover" class="form-control-file" id="inputCover" accept="image/*">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="inputPDF" class="col-sm-2 col-form-label">New Book PDF <span class="text-danger">*</span></label>
+                        <div class="col-sm-10">
+                            <input type="file" name="pdf" class="form-control-file" id="inputPDF" accept="application/pdf" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-sm-10">
+                            <button type="submit" class="btn btn-primary">Update Book Details</button>
+                        </div>
+                    </div>
+                </form>
+
+                <form action="Dashboard.html">
+                    <div class="col-sm-10">
+                        <button type="submit" class="btn btn-primary">Back</button><br><br>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
